@@ -1,0 +1,1494 @@
+@use 'sass:math'
+@use 'sass:color'
+
+*
+    margin: 0
+    padding: 0
+.limiter
+    width: 1620px
+    margin: 0 auto
+    position: relative
+header
+    background: linear-gradient(104.11deg, #63ABDB 0%, #40CDD6 80.17%)
+.kroshki
+    margin-top: 50px
+    margin-bottom: 50px
+.kroshki__list
+    display: flex
+    li
+        list-style: none
+        padding-right: 18px
+        position: relative
+        &:last-child
+            margin-right: 0
+            padding-right: 0
+        &::before
+            content: '/\00a0'
+            position: absolute
+            right: 0
+            top: 3px
+        &:last-child
+            &::before
+                content: ''
+        a
+            font-family: 'Roboto'
+            font-style: normal
+            font-weight: 400
+            font-size: 18px
+            color: #383838
+            opacity: 0.5
+            text-decoration: none
+.header__screen
+    background: linear-gradient(104.11deg,#63abdb,#40cdd6 80.17%)
+.header__menu__items
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding-top: 32px
+    padding-bottom: 50px
+.header__menu__katalogbutton
+    a
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        padding-right: 13px
+        width: 150px
+        height: 56px
+        background: #308AC5
+        text-decoration: none
+        position: relative
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 25px
+        color: #FFFFFF
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            left: 15px
+            top: 21px
+            width: 30px
+            height: 17px
+            background: url(../images/dist/katafter.svg)
+.header__menu__nav
+    ul
+        display: flex
+        li
+            list-style-type: none
+            margin-right: 30px
+            &:last-child
+                margin-right: 0
+            a
+                font-family: 'Roboto'
+                font-style: normal
+                font-weight: 500
+                font-size: 25px
+                color: #FFFFFF
+                text-decoration: none
+                &:hover
+                    color: #FFF38B
+.header__form__area
+    input
+        width: 326px
+        height: 56px
+        background: none
+        border: 3px solid #3089C5
+        outline: none
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 25px
+        color: #FFFFFF
+        text-indent: 15px
+.header__form__button
+    margin-top: 1px
+    button
+        width: 52px
+        height: 56px
+        border: 3px solid #3089C5
+        background: #3089C5
+        position: relative
+        cursor: pointer
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            left: 10px
+            top: 10px
+            width: 27px
+            height: 27px
+            background: url(../images/dist/search.svg)
+.header__menu__cart
+    a
+        position: relative
+        height: 100%
+        display: flex
+.header__cart_kolvo
+    position: absolute
+    right: -10px
+    top: 5px
+    width: 23px
+    height: 15.87px
+    background: #FFF38B
+    border-radius: 53px
+    p
+        text-align: center
+        font-size: 13px
+.header__menu__search
+    form
+        display: flex
+        align-items: center
+.header__menu__feedback
+    a
+        display: flex
+        height: 56px
+        background: #308AC5
+        padding-right: 13px
+        padding-left: 13px
+        align-items: center
+        text-decoration: none
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 25px
+        color: #FFFFFF
+        &:hover
+            text-decoration: underline
+.header__line
+    height: 1px
+    width: 100%
+    background: rgba(255, 255, 255, 0.3)
+.header__disc__heading
+    margin-top: 128px
+    h1
+        font-family: 'Rubik'
+        font-style: normal
+        font-weight: 700
+        font-size: 60px
+        text-transform: uppercase
+        color: #FFFFFF
+        max-width: 634px
+.header__disc__describe
+    margin-top: 54px
+    margin-bottom: 57px
+    h2
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 25px
+        color: #FFFFFF
+        max-width: 421px
+        line-height: 29px
+.header__disc__button
+    a
+        display: flex
+        width: 189px
+        height: 56px
+        justify-content: center
+        align-items: center
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 25px
+        color: #383838
+        background: #FFF38B
+        text-decoration: none
+.header__content__slide
+    display: flex!important
+    justify-content: space-between
+.header__content__slide__image
+    width: 974px
+    margin-top: 141px
+    margin-bottom: 222px
+    display: flex
+    justify-content: flex-end
+    img
+        width: 100%
+.main__catalog
+    margin-top: 170px
+.main__offer
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 51px
+.main__offer__disc
+    h3
+        font-family: 'Rubik'
+        font-style: normal
+        font-weight: 700
+        font-size: 40px
+        text-transform: uppercase
+        color: #383838
+    p
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 25px
+        color: #383838
+        opacity: 0.7
+.main__offer__button
+    a
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 279px
+        height: 56px
+        border: 3px solid #3089C5
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 25px
+        color: #3089C5
+        text-decoration: none
+.main__catalog__items
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+.main__catalog__item
+    a
+        display: flex
+        width: 382px
+        height: 382px
+        background: #40CDD6
+        margin-bottom: 30px
+        flex-direction: column
+        text-decoration: none
+        align-items: center
+        justify-content: center
+        &:hover
+            .main__catalog__item__disc
+                p
+                    color: #FFF38B
+            .main__catalog__item__img
+                img
+                    width: 95%
+.main__catalog__item__img
+    display: flex
+    justify-content: center
+    margin-top: 40px
+    max-width: 333px
+    max-height: 233px
+    img
+        width: 100%
+        height: 100%
+        object-fit: contain
+.main__catalog__item__disc
+    p
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 700
+        font-size: 18px
+        color: #FFFFFF
+        text-decoration: none
+        text-align: center
+.about
+    background: #C9D0DB
+    height: 943px
+.about__items
+    position: absolute
+    top: 87px
+    height: 943px
+    width: 100%
+    background: #fff
+.about__limiter__offer
+    p
+        font-family: 'Rubik'
+        font-style: normal
+        font-weight: 700
+        font-size: 40px
+        text-transform: uppercase
+        color: #383838
+.about__limiter
+    width: 1406px
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    justify-content: center
+    height: 100%
+.about__limiter__content
+    display: flex
+    justify-content: space-between
+.about__limiter__left
+    padding-right: 59px
+.about__limiter__left__disc
+    p
+        margin-bottom: 40px
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 25px
+        color: #383838
+        opacity: 0.7
+        &:last-child
+            margin-bottom: 0
+.about__limiter__left__popup
+    margin-top: 54px
+    a
+        display: flex
+        justify-content: center
+        align-items: center
+        border: 3px solid #3089C5
+        width: 239px
+        height: 56px
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 25px
+        color: #3089C5
+        text-decoration: none
+.about__limiter__line
+    background: #C9D0DB
+    opacity: 0.5
+    width: 100%
+    height: 2px
+    margin-top: 54px
+    margin-bottom: 54px
+// .about__limiter__right
+//     min-width: 824px
+//     height: 574px
+//     img
+//         width: 100%
+//         height: 100%
+//         object-fit: cover
+.popular
+    padding-top: 249px
+    // background: #F3F5F8
+    padding-bottom: 192px
+.popular__arrows
+    margin-top: 54px
+    margin-bottom: 40px
+.popular__item
+    a
+        display: flex
+        // width: 382px
+        height: 498px
+        margin-right: 30px
+        background: #fff
+        flex-direction: column
+        text-decoration: none
+        align-items: center
+        justify-content: center
+        border: 1px solid #f3f5f8
+        &:first-child
+            margin-left: 15px
+        &:hover
+            border: 1px solid #3089c5
+            .popular__item__buy
+                display: block
+        &:last-child
+            margin-right: 0
+.popular__item__img
+    display: flex
+    justify-content: center
+    max-width: 333px
+    img
+        width: 100%
+        height: 100%
+        object-fit: contain
+.popular__item__disc
+    margin-top: 44px
+    margin-bottom: 30px
+    p
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 25px
+        color: #383838
+.popular__item__price
+    p
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 30px
+        color: #383838
+.popular__item__buy
+    width: 158px
+    height: 56px
+    background: #3089C5
+    border: none
+    margin-top: 30px
+    // display: none
+    cursor: pointer
+    span
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 25px
+        color: #FFFFFF
+.arrovsprojects
+    display: flex
+.ArrowPrev
+    width: 60px
+    height: 73px
+    border-left: 3px solid #DCDCDC
+    border-top: 3px solid #DCDCDC
+    border-bottom: 3px solid #DCDCDC
+    position: relative
+    cursor: pointer
+    &::after
+        content: ''
+        display: block
+        position: absolute
+        width: 16px
+        height: 28px
+        background: url(../images/dist/prev.svg)
+        left: 20px
+        top: 24px
+.ArrowNext
+    width: 60px
+    height: 73px
+    border: 3px solid #DCDCDC
+    position: relative
+    cursor: pointer
+    &::after
+        content: ''
+        display: block
+        position: absolute
+        width: 16px
+        height: 28px
+        background: url(../images/dist/next.svg)
+        right: 20px
+        top: 24px
+.certificates
+    padding-bottom: 142px
+.certificates__items
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+.certificates__item
+    max-width: 383px
+    max-height: 527px
+    img
+        width: 100%
+        object-fit: contain
+footer
+    background: #4F98C8
+    padding-top: 80px
+    padding-bottom: 74px
+.footer__items
+    display: flex
+    justify-content: space-between
+.footer__menu
+    display: flex
+.footer__menu__item__offer
+    font-family: 'Roboto'
+    font-style: normal
+    font-weight: 500
+    font-size: 30px
+    color: #FFFFFF
+    margin-bottom: 30px
+.footer__menu__item
+    margin-right: 56px
+    &:last-child
+        margin-right: 0
+.footer__menu__item__links
+    ul  
+        li
+            list-style: none
+            margin-bottom: 15px
+            &:last-child
+                margin-bottom: 0
+            a
+                font-family: 'Roboto'
+                font-style: norma
+                font-weight: 500
+                font-size: 25px
+                color: #FFFFFF
+                text-decoration: none
+                &:hover
+                    color: #FFF38B
+.footer__contacts
+    display: flex
+    flex-direction: column
+.footer__contacts__popup
+    a
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 239px
+        height: 56px
+        border: 3px solid #FFF38B
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 25px
+        color: #FFF38B
+        text-decoration: none
+.footer__contacts__phone
+    margin-bottom: 30px
+    margin-top: 30px
+    a
+        text-decoration: none
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 70
+        font-size: 30px
+        color: #FFFFFF
+.footer__contacts__mail
+    a
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 25px
+        color: #FFFFFF
+        opacity: 0.7
+        text-decoration: none
+.footer__line
+    width: 100%
+    height: 2px
+    background: rgba(255, 255, 255, 0.3)
+    margin-top: 70px
+    margin-bottom: 50px
+.footer__docs
+    display: flex
+    justify-content: space-between
+    a
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 25px
+        line-height: 29px
+        color: #FFFFFF
+        opacity: 0.7
+        text-decoration: none
+.cart
+    // background: #E5E5E5
+    padding-bottom: 62px
+.cart__offer
+    padding-bottom: 62px
+    h3
+        font-family: 'Rubik'
+        font-style: normal
+        font-weight: 700
+        font-size: 40px
+        text-transform: uppercase
+        color: #383838
+.cart__items
+    display: flex
+    justify-content: space-between
+    position: relative
+    padding-bottom: 62px
+.cart__content
+    width: 66.5%
+.cart__total
+    width: 31.5%
+    background: #fff
+    height: 100%
+    border: 1px solid #f3f5f8
+.cart__content__item
+    width: 100%
+    background: #fff
+    height: 148px
+    margin-bottom: 30px
+    display: flex
+    align-items: center
+    justify-content: space-around
+    border: 1px solid #f3f5f8
+    &:last-child
+        margin-bottom: 0
+.cart__content__item__general
+    height: 100%
+    display: flex
+    align-items: center
+.cart__content__item__img
+    width: 200px
+    height: 135px
+    margin-right: 40px
+    img
+        width: 100%
+        height: 100%
+        object-fit: contain
+.cart__content__item__titel__article
+    p
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 400
+        font-size: 14px
+        color: #383838
+        opacity: 0.6
+.cart__content__item__titel__name
+    margin-top: 10px
+    p
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 18px
+        color: #383838
+        opacity: 0.7
+        max-width: 244px
+.cart__content__quantity
+    margin-top: 0!important
+.cart__content__price
+    font-family: 'Roboto'
+    font-style: normal
+    font-weight: 500
+    font-size: 25px
+    color: #383838
+.cart__content____delete
+    position: relative
+    width: 19px
+    height: 21px
+    &::before
+        content: ''
+        position: absolute
+        display: block
+        width: 19px
+        height: 21px
+        left: 0
+        top: 0
+        background: url(../images/dist/deletenormal.svg)
+        cursor: pointer
+    &:hover
+        &::before
+            background: url(../images/dist/deletered.svg)
+.cart__total__offer
+    display: flex
+    justify-content: space-between
+    margin-top: 40px
+.cart__total__offer__offer
+    font-family: 'Roboto'
+    font-style: normal
+    font-weight: 700
+    font-size: 25px
+    color: #383838
+    padding-left: 48px
+.cart__total__offer__kolvo
+    font-family: 'Roboto'
+    font-style: normal
+    font-weight: 700
+    font-size: 25px
+    color: #383838
+    padding-right: 48px
+    opacity: 0.7
+.cart__total__result
+    display: flex
+    justify-content: space-between
+    margin-top: 20px
+.cart__total__result__offer
+    font-family: 'Roboto'
+    font-style: normal
+    font-weight: 700
+    font-size: 30px
+    color: #383838
+    opacity: 0.7
+    padding-left: 48px
+.cart__total__result__price
+    font-family: 'Roboto'
+    font-style: normal
+    font-weight: 700
+    font-size: 40px
+    color: #383838
+    padding-right: 48px
+.cart__total__btn
+    display: flex
+    justify-content: center
+    padding-bottom: 40px
+    button
+        width: 424px
+        height: 56px
+        background: linear-gradient(91deg, #63ABDB 0%, #40CDD6 100%)
+        border: none
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 18px
+        color: #FFFFFF
+        margin-top: 20px
+.cart__oformlenie
+    background: #FFFFFF
+    padding-left: 48px
+    padding-right: 48px
+    padding-bottom: 67px
+    border: 1px solid #f3f5f8
+.cart__oformlenie__offer
+    padding-top: 57px
+    padding-bottom: 40px
+    h4
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 700
+        font-size: 25px
+        color: #383838
+.cart__oformlenie__pay__items
+    display: flex
+    flex-wrap: wrap
+.cart__oformlenie__pay__items__item
+    width: 50%
+    margin-bottom: 20px
+    &:nth-child(3n)
+        margin-bottom: 0
+    &:last-child
+        margin-bottom: 0
+    label
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 18px
+        color: #383838
+        opacity: 0.7
+        padding-left: 45px
+.cart__customcheckbox
+    position: absolute
+    z-index: -1
+    opacity: 0
+.cart__customcheckbox + label 
+        display: inline-flex
+        align-items: center
+        user-select: none
+        position: relative
+.cart__customcheckbox + label
+    &::before 
+        content: ''
+        display: block
+        width: 23px
+        height: 23px
+        position: absolute
+        background: url(../images/dist/radio.svg)
+        left: 0
+.cart__customcheckbox
+    &:checked + label
+        &::before
+            background: url(../images/dist/radioactive.svg)
+.cart__oformlenie__information__item__adress
+    width: 100%!important
+.cart__oformlenie__information__item
+    width: 43%
+    margin-bottom: 16px
+    p   
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 18px
+        color: #383838
+        opacity: 0.7
+        margin-bottom: 6px
+    input
+        width: 445px
+        height: 41px
+        background: #F3F5F8
+        border: none
+        outline: none
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 16px
+        color: #383838
+        opacity: 1
+        text-indent: 11px
+        width: 100%
+    &:last-child
+        margin-bottom: 0
+.cart__oformlenie__information__items
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+.cart__oformlenie__information__alarm
+    margin-top: 20px
+    p
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        color: #383838
+        opacity: 0.5
+.category
+    padding-bottom: 62px
+.tegs
+    background: #FFFFFF
+    margin-bottom: 60px
+    border: 1px solid #F3F5F8
+.category__block
+    display: flex
+    justify-content: space-between
+    position: relative
+.category__filters
+    margin-right: 30px
+    // width: 139.9%
+    top: 0px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    form
+        border-top: 1px solid #F3F5F8
+        border-left: 1px solid #F3F5F8
+        border-right: 1px solid #F3F5F8
+.category__filters__button
+    margin-top: 15px
+    input
+        width: 100%
+        height: 56px
+        border: none
+        outline: none
+.category__filters__button__apply
+    input
+        background: #3089C5
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 18px
+        color: #FFFFFF
+.category__filters__button__reset
+    input
+        background: #F3F5F8
+        border: 2px solid #DCDCDC
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 18px
+        color: #383838
+        opacity: 1
+.category__items__list
+    display: flex
+    flex-wrap: wrap
+.category__item
+    width: 382px
+    height: 542px
+    background: #fff
+    margin-right: 30px
+    margin-bottom: 30px
+    border: 1px solid #F3F5F8
+    &:nth-child(3n)
+        margin-right: 0
+    a
+        text-decoration: none
+        width: 100%
+        height: 100%
+        display: flex
+        flex-direction: column
+    &:hover
+        border: 1px solid #3089C5
+.tegs__line
+    width: 100%
+    height: 2px
+    background: #F3F5F8
+    margin-top: 15px
+    margin-bottom: 30px
+.tegs__items
+    display: flex
+    padding-left: 30px
+    padding-top: 30px
+    flex-wrap: wrap
+    a
+        display: flex
+        background: #F3F5F8
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 18px
+        color: #383838
+        opacity: 0.7
+        text-decoration: none
+        justify-content: center
+        align-items: center
+        padding: 10px 15px
+        margin-right: 30px
+        margin-bottom: 15px
+        &:last-child
+            margin-right: 0
+.tegs__filter
+    display: flex
+    padding-bottom: 30px
+    padding-left: 40px
+.tegs__sort__offer
+    margin-right: 6px
+    p
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 400
+        font-size: 18px
+        color: #383838
+        opacity: 0.7
+.tegs__sort__items
+    a
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 400
+        font-size: 18px
+        color: #383838
+        opacity: 0.9
+        text-decoration: none
+        padding-right: 20px
+        &::before
+            content: ''
+            position: absolute
+            display: block
+            background: url(../images/dist/catarrow.svg)
+            width: 9px
+            height: 5px
+            right: 0
+            top: 8px
+.tegs__kolvo__offer
+    margin-right: 6px
+    p
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 400
+        font-size: 18px
+        color: #383838
+        opacity: 0.7
+.tegs__kolvo__items
+    font-family: 'Roboto'
+    font-style: normal
+    font-weight: 400
+    font-size: 18px
+    color: #383838
+    opacity: 0.7
+    span
+        margin-left: 6px
+        margin-right: 6px
+.tegs__sort
+    display: flex
+    margin-right: 62px
+.tegs__kolvo
+    display: flex
+.tegs__kolvo__items
+    display: flex
+.tegs__sort__items
+    position: relative
+    &:hover
+        .tegs__sort__items__submenu
+            display: block
+.tegs__sort__items__submenu
+    width: 100%
+    background: #eee
+    height: 300px
+    display: none
+// Аккардеон
+.accordion
+    background: #fff
+    cursor: pointer
+    padding: 30px 61px
+    width: 100%
+    text-align: left
+    border: none
+    border-top: 1px solid #F3F5F8
+    outline: none
+    transition: 0.4s
+    font-family: 'Roboto'
+    font-style: normal
+    font-weight: 500
+    font-size: 18px
+    color: #383838
+    position: relative
+    &::before
+        content: ''
+        position: absolute
+        display: block
+        background: url(../images/dist/filtarrow.svg)
+        width: 15px
+        height: 9px
+        left: 30px
+        top: 35px
+/* Добавить цвет фона для кнопки, если она нажата (добавить .активный класс с JS), а при наведении на него курсора мыши (наведите курсор) */
+.active.accordion
+    color: #3089C5
+    &::before
+        content: ''
+        position: absolute
+        display: block
+        background: url(../images/dist/filtarrowactive.svg)
+        width: 15px
+        height: 9px
+        left: 30px
+        top: 35px
+/* Стиль аккордеон панели. Примечание: скрыто по умолчанию */
+.panel
+    padding-left: 30px
+    padding-right: 30px
+    background-color: white
+    display: none
+    overflow: hidden
+    padding-bottom: 30px
+// Аккардеон
+.category__filters__items__offer
+    padding: 30px
+    background: #fff
+    p
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 18px
+        color: #383838
+// PriceRange
+
+.price-input
+    width: 100%
+    display: flex
+    margin-bottom: 30px
+.pricemin
+    width: 90px
+    height: 50px
+.priceminfield
+    position: relative
+    &::after
+        content: 'Р'
+        display: block
+        position: absolute
+        right: -20px
+        top: 15px
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 18px
+        color: #383838
+        opacity: 0.7
+.pricemaxfield
+    position: relative
+    &::after
+        content: 'Р'
+        display: block
+        position: absolute
+        right: -20px
+        top: 15px
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 18px
+        color: #383838
+        opacity: 0.7
+    &::before
+        content: '-'
+        display: block
+        position: absolute
+        left: 35px
+        top: 15px
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 18px
+        color: #383838
+        opacity: 0.7
+.pricemax
+    width: 90px
+    height: 50px
+.field
+    display: flex
+    align-items: center
+.field 
+    input
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 18px
+        color: #383838
+        opacity: 0.7
+        outline: none
+        font-size: 19px
+        margin-left: 53px
+        text-align: center
+        border: 2px solid #DCDCDC
+        -moz-appearance: textfield
+    &:first-child
+        input
+            margin-left: 0
+input[type="number"]
+  &::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+    -webkit-appearance: none
+.slider
+    height: 2px
+    position: relative
+    background: #ddd
+    border-radius: 50px
+    padding-right: 30px
+.progress
+    height: 100%
+    left: 25%
+    right: 25%
+    position: absolute
+    border-radius: 5px
+    background: #17A2B8
+.range-input
+    position: relative
+    margin-bottom: 6px
+    input
+        position: absolute
+        width: 100%
+        height: 5px
+        top: -5px
+        background: none
+        pointer-events: none
+        -webkit-appearance: none
+        -moz-appearance: none
+input[type="range"]
+    &::-webkit-slider-thumb
+        height: 17px
+        width: 17px
+        border-radius: 50%
+        background: #17A2B8
+        pointer-events: auto
+        -webkit-appearance: none
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.05)
+    &::-moz-range-thumb
+        height: 17px
+        width: 17px
+        border: none
+        border-radius: 50%
+        background: #17A2B8
+        pointer-events: auto
+        -moz-appearance: none
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.05)
+// PriceRange
+.category__filters__btn
+    input
+        margin-top: 30px
+        width: 100%
+        height: 56px
+        background: linear-gradient(91deg, #3089C5 0%, #40CDD6 100%)
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 18px
+        color: #FFFFFF
+        border: none
+        outline: none
+.category__filters__manufacturer__item__back
+    position: absolute
+    width: 119%
+    height: 100%
+    margin-left: -30px
+.category__filters__manufacturer__item__active
+    background: rgba(255, 243, 139, 0.31)
+.category__filters__manufacturer__item
+    margin-bottom: 8px
+    display: flex
+    flex-direction: row-reverse
+    justify-content: flex-end
+    align-items: center
+    height: 28px
+    position: relative
+    &:last-child
+        margin-bottom: 0
+    label
+        width: 100%
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 400
+        font-size: 18px
+        color: #383838
+        opacity: 0.7
+        margin-left: 12px
+        position: relative
+        z-index: 1
+    input
+        position: relative
+        z-index: 1
+.filters__manufacturer__panel
+    height: 183px
+    overflow-y: auto
+.category__item__cart__img
+    display: flex
+    justify-content: center
+    margin-top: 25px
+    height: 226px
+    img
+        max-width: 280px
+        height: 100%
+        object-fit: contain
+.category__item__cart__disc
+    display: flex
+    justify-content: center
+    margin-top: 15px
+    p
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 25px
+        color: #383838
+        opacity: 1
+        text-decoration: none
+        max-width: 244px
+        text-align: center
+.category__item__cart__price
+    p
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 25px
+        text-align: center
+        color: #383838
+        margin-top: 30px
+.category__item__cart__btn
+    display: flex
+    justify-content: center
+    margin-top: 43px
+    button
+        width: 158px
+        height: 56px
+        border: 2px solid #3089C5
+        background: none
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 25px
+        color: #3089C5
+        cursor: pointer
+        &:hover
+            background: #3089C5
+            color: #fff
+.category__items__amount
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    height: 110px
+    border: 1px solid #f3f5f8
+.category__items__amount__list
+    padding-left: 30px
+.category__items__amount__kolvo
+    padding-right: 30px
+.previoushard
+    display: flex
+.nexthard
+    display: flex
+.page__items
+    display: flex
+    li
+        list-style: none
+        a
+            display: flex
+            text-decoration: none
+            width: 44.12px
+            height: 50px
+            border-top: 1px solid #DCDCDC
+            border-bottom: 1px solid #DCDCDC
+            border-left: 1px solid #DCDCDC
+            justify-content: center
+            align-items: center
+            font-family: 'Roboto'
+            font-style: normal
+            font-weight: 500
+            font-size: 18px
+            color: #383838
+            opacity: 0.7
+            &:last-child
+                border-right: 1px solid #DCDCDC
+            &:hover
+                background: #3089C5
+                color: #fff
+            img
+                width: 6px
+                height: 12px
+                margin-right: 3px
+                &:last-child
+                    margin-right: 0
+.catalog__offer
+    margin-bottom: 62px
+.catalog__items__inner
+    margin-top: 121px
+    margin-bottom: 163px
+.tovar__head__image
+    max-width: 574px
+    margin-top: 88px
+    position: relative
+    margin-right: 152px
+.tovar__head__disc
+    width: 500px
+    height: 500px
+    margin-top: 88px
+.tovar__head
+    display: flex
+    justify-content: center
+    border: 1px solid #f3f5f8
+.swiper__big
+    margin-bottom: 20px
+.tovar__swiper__big
+    max-width: 574px
+.swiper__small
+    max-width: 574px
+.tovar__swiper__big__item
+    display: flex
+    align-items: center
+    height: 390px!important
+    justify-content: center
+.tovar__swiper__small__item
+    width: 99px!important
+    height: 99px!important
+    margin: 0 auto
+    margin-right: 0!important
+    margin-left: 0!important
+    img
+        object-fit: contain
+        width: 100%
+        height: 100%
+.tovar__arrows
+    position: absolute
+    width: 100%
+.swiper-button-next
+    right: -43px!important
+    top: 200px!important
+.swiper-button-prev
+    left: -43px!important
+    top: 200px!important
+.tovar__head__name
+    h1
+        font-family: 'Rubik'
+        font-style: normal
+        font-weight: 500
+        font-size: 30px
+        color: #383838
+        max-width: 567px
+.tovar__head__priceoffer
+    margin-top: 30px
+    margin-bottom: 10px
+    p
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 18px
+        color: #383838
+        opacity: 0.7
+.tovar__head__price
+    p
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 700
+        font-size: 40px
+        color: #383838
+.tovar__head__quantity
+    display: flex
+    align-items: center
+    width: 170px
+    height: 57px
+    background: #DEDEDE
+    justify-content: space-around
+    span
+        display: flex
+        align-items: center
+    input
+        width: 40px
+        height: 100%
+        border: none
+        background: #DEDEDE
+        outline: none
+        text-align: center
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 25px
+        color: #383838
+        opacity: 0.7
+.tovar__vivod
+    display: flex
+    align-items: center
+    margin-top: 31px
+.tovar__head__quantity__add
+    margin-left: 30px
+    a
+        display: flex
+        width: 190px
+        height: 57px
+        display: flex
+        text-decoration: none
+        justify-content: center
+        align-items: center
+        border: 1px solid #3089C5
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 25px
+        color: #3089C5
+        &:hover
+            background: #3089C5
+            color: #fff
+.tovar__head__opisanie
+    margin-top: 50px
+    p
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 400
+        font-size: 18px
+        color: #383838
+        opacity: 0.7
+.hiddenwrapper
+    max-height: 128px
+    overflow: hidden
+    position: relative
+.hiddenwrapper
+    .bottom
+        position: absolute
+        bottom: 0
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 68.02%)
+        width: 100%
+        height: 60px
+        opacity: 1
+        transition: 0.3s
+.read-more-checker
+    opacity: 0
+    position: absolute
+.read-more-checker
+    &:checked ~ 
+        .hiddenwrapper
+            max-height: none
+.read-more-checker
+    &:checked ~ 
+        .hiddenwrapper
+            .bottom
+                opacity: 0
+                transition: 0.3s
+.read-more-checker ~ 
+    .read-more-button
+        &:before
+            content: "Развернуть »"
+            font-family: 'Roboto'
+            font-style: normal
+            font-weight: 400
+            font-size: 18px
+            color: #3089C5
+.read-more-checker:checked ~ 
+    .read-more-button
+        &:before
+            content: "Свернуть «"
+            font-family: 'Roboto'
+            font-style: normal
+            font-weight: 400
+            font-size: 18px
+            color: #3089C5
+.read-more-button 
+    cursor: pointer
+    display: inline-block
+    color: #777
+    text-decoration: underline
+
+.tovar__characteristics
+    margin-top: 80px
+.tovar__characteristics__offer
+    margin-bottom: 15px
+    h3
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 25px
+        color: #383838
+.tovar__characteristics
+    table
+        border-collapse: collapse
+        width: 100%
+        tr
+            width: 100%
+            height: 41px
+            border-top: 1px solid #DEDEDE
+            bordercolor: #DEDEDE
+            &:last-child
+                border-bottom: 1px solid #DEDEDE
+            td
+                font-family: 'Roboto'
+                font-style: normal
+                font-weight: 400
+                font-size: 18px
+                color: #383838
+                opacity: 0.7
+                width: 50%
+
+
+
+
+
+
+
+
+
+
+
+@import config
+@import 'blocks/**/*'
