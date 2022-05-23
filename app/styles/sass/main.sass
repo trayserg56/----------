@@ -5,11 +5,14 @@
     margin: 0
     padding: 0
 .limiter
-    width: 1620px
+    max-width: 1620px
+    width: 85%
     margin: 0 auto
     position: relative
-header
-    background: linear-gradient(104.11deg, #63ABDB 0%, #40CDD6 80.17%)
+
+@media (max-width: 920px)
+    .limiter
+        width: 92%
 .kroshki
     margin-top: 50px
     margin-bottom: 50px
@@ -38,173 +41,6 @@ header
             color: #383838
             opacity: 0.5
             text-decoration: none
-.header__screen
-    background: linear-gradient(104.11deg,#63abdb,#40cdd6 80.17%)
-.header__menu__items
-    display: flex
-    align-items: center
-    justify-content: space-between
-    padding-top: 32px
-    padding-bottom: 50px
-.header__menu__katalogbutton
-    a
-        display: flex
-        justify-content: flex-end
-        align-items: center
-        padding-right: 13px
-        width: 150px
-        height: 56px
-        background: #308AC5
-        text-decoration: none
-        position: relative
-        font-family: 'Roboto'
-        font-style: normal
-        font-weight: 500
-        font-size: 25px
-        color: #FFFFFF
-        &::after
-            content: ''
-            display: block
-            position: absolute
-            left: 15px
-            top: 21px
-            width: 30px
-            height: 17px
-            background: url(../images/dist/katafter.svg)
-.header__menu__nav
-    ul
-        display: flex
-        li
-            list-style-type: none
-            margin-right: 30px
-            &:last-child
-                margin-right: 0
-            a
-                font-family: 'Roboto'
-                font-style: normal
-                font-weight: 500
-                font-size: 25px
-                color: #FFFFFF
-                text-decoration: none
-                &:hover
-                    color: #FFF38B
-.header__form__area
-    input
-        width: 326px
-        height: 56px
-        background: none
-        border: 3px solid #3089C5
-        outline: none
-        font-family: 'Roboto'
-        font-style: normal
-        font-weight: 500
-        font-size: 25px
-        color: #FFFFFF
-        text-indent: 15px
-.header__form__button
-    margin-top: 1px
-    button
-        width: 52px
-        height: 56px
-        border: 3px solid #3089C5
-        background: #3089C5
-        position: relative
-        cursor: pointer
-        &::after
-            content: ''
-            display: block
-            position: absolute
-            left: 10px
-            top: 10px
-            width: 27px
-            height: 27px
-            background: url(../images/dist/search.svg)
-.header__menu__cart
-    a
-        position: relative
-        height: 100%
-        display: flex
-.header__cart_kolvo
-    position: absolute
-    right: -10px
-    top: 5px
-    width: 23px
-    height: 15.87px
-    background: #FFF38B
-    border-radius: 53px
-    p
-        text-align: center
-        font-size: 13px
-.header__menu__search
-    form
-        display: flex
-        align-items: center
-.header__menu__feedback
-    a
-        display: flex
-        height: 56px
-        background: #308AC5
-        padding-right: 13px
-        padding-left: 13px
-        align-items: center
-        text-decoration: none
-        font-family: 'Roboto'
-        font-style: normal
-        font-weight: 500
-        font-size: 25px
-        color: #FFFFFF
-        &:hover
-            text-decoration: underline
-.header__line
-    height: 1px
-    width: 100%
-    background: rgba(255, 255, 255, 0.3)
-.header__disc__heading
-    margin-top: 128px
-    h1
-        font-family: 'Rubik'
-        font-style: normal
-        font-weight: 700
-        font-size: 60px
-        text-transform: uppercase
-        color: #FFFFFF
-        max-width: 634px
-.header__disc__describe
-    margin-top: 54px
-    margin-bottom: 57px
-    h2
-        font-family: 'Roboto'
-        font-style: normal
-        font-weight: 500
-        font-size: 25px
-        color: #FFFFFF
-        max-width: 421px
-        line-height: 29px
-.header__disc__button
-    a
-        display: flex
-        width: 189px
-        height: 56px
-        justify-content: center
-        align-items: center
-        font-family: 'Roboto'
-        font-style: normal
-        font-weight: 500
-        font-size: 25px
-        color: #383838
-        background: #FFF38B
-        text-decoration: none
-.header__content__slide
-    display: flex!important
-    justify-content: space-between
-.header__content__slide__image
-    width: 974px
-    margin-top: 141px
-    margin-bottom: 222px
-    display: flex
-    justify-content: flex-end
-    img
-        width: 100%
 .main__catalog
     margin-top: 170px
 .main__offer
@@ -483,7 +319,7 @@ footer
     &:last-child
         margin-right: 0
 .footer__menu__item__links
-    ul  
+    ul
         li
             list-style: none
             margin-bottom: 15px
@@ -732,13 +568,13 @@ footer
     position: absolute
     z-index: -1
     opacity: 0
-.cart__customcheckbox + label 
+.cart__customcheckbox + label
         display: inline-flex
         align-items: center
         user-select: none
         position: relative
 .cart__customcheckbox + label
-    &::before 
+    &::before
         content: ''
         display: block
         width: 23px
@@ -755,7 +591,7 @@ footer
 .cart__oformlenie__information__item
     width: 43%
     margin-bottom: 16px
-    p   
+    p
         font-family: 'Roboto'
         font-style: normal
         font-weight: 500
@@ -1065,7 +901,7 @@ footer
 .field
     display: flex
     align-items: center
-.field 
+.field
     input
         font-family: 'Roboto'
         font-style: normal
@@ -1417,16 +1253,16 @@ input[type="range"]
     opacity: 0
     position: absolute
 .read-more-checker
-    &:checked ~ 
+    &:checked ~
         .hiddenwrapper
             max-height: none
 .read-more-checker
-    &:checked ~ 
+    &:checked ~
         .hiddenwrapper
             .bottom
                 opacity: 0
                 transition: 0.3s
-.read-more-checker ~ 
+.read-more-checker ~
     .read-more-button
         &:before
             content: "Развернуть »"
@@ -1435,7 +1271,7 @@ input[type="range"]
             font-weight: 400
             font-size: 18px
             color: #3089C5
-.read-more-checker:checked ~ 
+.read-more-checker:checked ~
     .read-more-button
         &:before
             content: "Свернуть «"
@@ -1444,7 +1280,7 @@ input[type="range"]
             font-weight: 400
             font-size: 18px
             color: #3089C5
-.read-more-button 
+.read-more-button
     cursor: pointer
     display: inline-block
     color: #777
@@ -1557,7 +1393,7 @@ input[type="range"]
     justify-content: center
 .about__discription__info
     margin-right: 80px
-    p   
+    p
         font-family: 'Roboto'
         font-style: normal
         font-weight: 500
