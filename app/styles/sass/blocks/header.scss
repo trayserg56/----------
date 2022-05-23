@@ -23,6 +23,8 @@ header{
 .header__screen{
     background: linear-gradient(104.11deg,#63abdb,#40cdd6 80.17%);
     height: 84vh;
+    display: flex;
+    align-items: center;
 }
 .header__menu{
     display: grid;
@@ -37,7 +39,7 @@ header{
 .menu__katalog{
     position: relative;
     border: none;
-    padding: 15px 12px 15px 50px;
+    padding: 16px 12px 17px 50px;
     background-color: #308AC5;
     font-family: 'Roboto';
     font-weight: 500;
@@ -52,6 +54,11 @@ header{
         width: 25px;
         height: 17px;
         background-image: url(../images/dist/katafter.svg)
+    }
+}
+@media (max-width: 1015px) {
+    .menu__katalog {
+        padding: 13px 12px 13px 50px;
     }
 }
 
@@ -87,6 +94,7 @@ header{
     grid-auto-flow: column;
     height: 56px;
     &_input{
+        box-sizing: border-box;
         width: 326px;
         background: none;
         border: 3px solid #3089C5;
@@ -95,7 +103,7 @@ header{
         font-weight: 500;
         font-size: 18px;
         color: #FFFFFF;
-        text-indent: 15px;
+        padding: 0 12px;
 
         &::placeholder{
             color: #fff;
@@ -124,8 +132,11 @@ header{
     }
 }
 @media (max-width: 1015px) {
-    .menu__search_btn{
-
+    .menu__search {
+        height: 48px;
+        .menu__search_btn{
+            width: 48px;
+        }
     }
 }
 
@@ -231,20 +242,15 @@ header{
 }
 
 .header__disc__heading{
-    margin-top: 128px;
     h1{
         font-family: 'Rubik';
-        font-style: normal;
         font-weight: 700;
-        font-size: 40px;
+        font-size: 60px;
         text-transform: uppercase;
         color: #FFFFFF;
-        max-width: 634px
     }
 }
 .header__disc__describe{
-    margin-top: 54px;
-    margin-bottom: 57px;
     h2{
         font-family: 'Roboto';
         font-style: normal;
@@ -257,11 +263,8 @@ header{
 }
 .header__disc__button{
     a{
-        display: flex;
-        width: 189px;
-        height: 56px;
-        justify-content: center;
-        align-items: center;
+        display: inline-block;
+        padding: 18px 53px;
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 500;
@@ -272,16 +275,76 @@ header{
     }
 }
 .header__content__slide{
-    display: flex!important;
-    justify-content: space-between
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: 2fr 3fr;
+    align-items: center;
+    gap: 30px;
+
+    &__disc{
+        display: grid;
+        gap: 50px;
+    }
 }
 .header__content__slide__image{
-    width: 974px;
-    margin-top: 141px;
-    margin-bottom: 222px;
-    display: flex;
-    justify-content: flex-end;
     img{
-        width: 100%
+        width: 100%;
+    }
+}
+
+@media (max-width: 1600px) {
+    .header__content__slide {
+        h1{
+            font-size: 48px;
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .header__content__slide {
+        &__disc {
+            gap: 30px;
+        }
+        h1 {
+            font-size: 40px;
+        }
+        h2 {
+            font-size: 18px;
+        }
+        .header__disc__button {
+            a {
+                font-size: 18px;
+                padding: 14px 35px;
+            }
+        }
+    }
+}
+@media (max-width: 980px) {
+    .header__content__slide {
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content max-content;
+        grid-auto-flow: dense;
+
+        &__disc{
+            grid-row-start: 2;
+            padding: 0 15px;
+        }
+    }
+}
+@media (max-width: 560px) {
+    .header__content__slide {
+        gap: 25px;
+        h1{
+            font-size: 28px;
+        }
+        h2{
+            font-size: 16px;
+        }
+        .header__disc__button{
+            a{
+                font-size: 16px;
+                padding: 14px 35px;
+            }
+        }
     }
 }

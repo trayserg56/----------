@@ -41,92 +41,13 @@
             color: #383838
             opacity: 0.5
             text-decoration: none
-.main__catalog
-    margin-top: 170px
-.main__offer
-    display: flex
-    justify-content: space-between
-    align-items: center
-    margin-bottom: 51px
-.main__offer__disc
-    h3
-        font-family: 'Rubik'
-        font-style: normal
-        font-weight: 700
-        font-size: 40px
-        text-transform: uppercase
-        color: #383838
-    p
-        font-family: 'Roboto'
-        font-style: normal
-        font-weight: 500
-        font-size: 25px
-        color: #383838
-        opacity: 0.7
-.main__offer__button
-    a
-        display: flex
-        align-items: center
-        justify-content: center
-        width: 279px
-        height: 56px
-        border: 3px solid #3089C5
-        font-family: 'Roboto'
-        font-style: normal
-        font-weight: 500
-        font-size: 25px
-        color: #3089C5
-        text-decoration: none
-.main__catalog__items
-    display: flex
-    justify-content: space-between
-    flex-wrap: wrap
-.main__catalog__item
-    a
-        display: flex
-        width: 382px
-        height: 382px
-        background: #40CDD6
-        margin-bottom: 30px
-        flex-direction: column
-        text-decoration: none
-        align-items: center
-        justify-content: center
-        &:hover
-            .main__catalog__item__disc
-                p
-                    color: #FFF38B
-            .main__catalog__item__img
-                img
-                    width: 95%
-.main__catalog__item__img
-    display: flex
-    justify-content: center
-    margin-top: 40px
-    max-width: 333px
-    max-height: 233px
-    img
-        width: 100%
-        height: 100%
-        object-fit: contain
-.main__catalog__item__disc
-    p
-        font-family: 'Roboto'
-        font-style: normal
-        font-weight: 700
-        font-size: 18px
-        color: #FFFFFF
-        text-decoration: none
-        text-align: center
 .about
-    background: #C9D0DB
-    height: 943px
+    background: #e7eaef
 .about__items
-    position: absolute
-    top: 87px
-    height: 943px
-    width: 100%
+    padding: 105px
     background: #fff
+    z-index: 2
+    transform: translateY(87px)
 .about__limiter__offer
     p
         font-family: 'Rubik'
@@ -136,41 +57,53 @@
         text-transform: uppercase
         color: #383838
 .about__limiter
-    width: 1406px
-    margin: 0 auto
     display: flex
     flex-direction: column
     justify-content: center
     height: 100%
 .about__limiter__content
-    display: flex
-    justify-content: space-between
+    margin-top: 100px
+    display: grid
+    grid-template-columns: 35.5% 1fr
+    gap: 87px
+    position: relative
+    &::before
+        content: ''
+        position: absolute
+        top: -55px
+        left: 0
+        width: 100%
+        height: 2px
+        background-color: #C9D0DB
 .about__limiter__left
-    padding-right: 59px
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
 .about__limiter__left__disc
     p
-        margin-bottom: 40px
+        margin-bottom: 1.5vmax
         font-family: 'Roboto'
         font-style: normal
         font-weight: 500
-        font-size: 25px
+        font-size: 18px
+        line-height: 21px
         color: #383838
         opacity: 0.7
         &:last-child
             margin-bottom: 0
 .about__limiter__left__popup
-    margin-top: 54px
     a
+        width: 50%
+        height: 56px
         display: flex
         justify-content: center
         align-items: center
         border: 3px solid #3089C5
-        width: 239px
-        height: 56px
         font-family: 'Roboto'
         font-style: normal
         font-weight: 500
-        font-size: 25px
+        font-size: 18px
         color: #3089C5
         text-decoration: none
 .about__limiter__line
@@ -180,16 +113,78 @@
     height: 2px
     margin-top: 54px
     margin-bottom: 54px
-// .about__limiter__right
-//     min-width: 824px
-//     height: 574px
-//     img
-//         width: 100%
-//         height: 100%
-//         object-fit: cover
+.about__limiter__right
+    img
+        width: 100%
+        object-fit: contain
+@media (max-width: 1600px)
+    .about__limiter__content
+        grid-template-columns: 40% 1fr
+        gap: 65px
+    .about__limiter__left__disc
+        p
+            font-size: 16px
+    .about__limiter__left__popup
+        a
+            height: 42px
+
+@media (max-width: 1400px)
+    .about__items
+        padding: 70px
+    .about__limiter__content
+        grid-template-columns: 52% 1fr
+        gap: 25px
+        margin-top: 70px
+        &::before
+            top: -40px
+    .about__limiter__left__disc
+        p
+            font-size: 14px
+    .about__limiter__left__popup
+        a
+            border: none
+            padding: 0
+            height: 100%
+            text-decoration: underline
+            width: 100%
+            display: inline-block
+
+@media (max-width: 1100px)
+    .about__limiter__content
+        grid-template-columns: 1fr
+        grid-template-rows: min-content max-content
+    .about__limiter__left
+        grid-row: 2
+    .about__limiter__right
+        width: 80%
+        margin: 0 auto
+    .about__limiter__left__popup
+        margin-top: 20px
+
+@media (max-width: 1100px)
+    .about__limiter__offer
+        p
+            font-size: 28px
+
+@media (max-width: 660px)
+    .about__items
+        padding: 50px
+    .about__limiter__right
+        width: 100%
+    .about__limiter__content
+        margin-top: 25px
+        &::before
+            display: none
+    .about__limiter__left__popup
+        a
+            font-size: 16px
+@media (max-width: 420px)
+    .about__items
+        padding: 35px
+
 .popular
     padding-top: 249px
-    // background: #F3F5F8
+    background: #f3f5f8
     padding-bottom: 192px
 .popular__arrows
     margin-top: 54px
