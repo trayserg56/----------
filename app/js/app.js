@@ -62,23 +62,21 @@ document.addEventListener('DOMContentLoaded', () => {
 		nextArrow: '<div class="ArrowNext"></div>',
 		responsive: [
 			{
-			breakpoint: 1024,
-			settings: {
-				slidesToShow: 3,
-				slidesToScroll: 3,
-				infinite: true,
-				dots: true
-			}
+				breakpoint: 1480,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 3,
+				}
 			},
 			{
-			breakpoint: 600,
-			settings: {
-				slidesToShow: 2,
-				slidesToScroll: 2
-			}
+				breakpoint: 1080,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2,
+				}
 			},
 			{
-			breakpoint: 480,
+			breakpoint: 630,
 			settings: {
 				slidesToShow: 1,
 				slidesToScroll: 1
@@ -157,6 +155,13 @@ document.addEventListener('DOMContentLoaded', () => {
 $(".category__filters__manufacturer__item").click(function(){
 	$(".category__filters__manufacturer__item__back").addClass("category__filters__manufacturer__item__active");
 });
-
-
+$("#settings-btn").click(function(){
+	$(".category__filters").toggleClass("category__filters__open");
+});
+$("#defFilters-btn").click(function(){
+	$(".category__filters").removeClass("category__filters__open");
+});
+$("#addFilters-btn").click(function(){
+	$(".category__filters").removeClass("category__filters__open");
+});
 })

@@ -1,135 +1,125 @@
 <!--#set var="title" value="OptimizedHTML 5" -->
 <!--#include virtual="/parts/header.html" -->
-<!--#include virtual="/parts/kroshki.html" -->
 <div class="cart">
     <div class="limiter">
-        <div class="cart__offer">
-            <h1>корзина  товаров</h1>
+        <div class="main__offer__disc">
+            <h3>корзина  товаров</h3>
         </div>
-        <div class="cart__items">
-            <div class="cart__content">
-                <div class="cart__content__items">
-                    <div class="cart__content__item">
-                        <div class="cart__content__item__general">
-                            <div class="cart__content__item__img">
-                                <img src="images/dist/teploizobor.png" alt="#">
-                            </div>
-                            <div class="cart__content__item__titel">
-                                <div class="cart__content__item__titel__article">
-                                    <p>Артикул: H2357891-YR</p>
-                                </div>
-                                <div class="cart__content__item__titel__name">
-                                    <p>Кондиционер Scoole Kam-Mi24 Max</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cart__content__quantity tovar__head__quantity">
-                            <span><img src="images/dist/minus.svg" alt="#"></span>
-                            <input type="text" value="1">
-                            <span><img src="images/dist/plus.svg" alt="#"></span>
-                        </div>
-                        <div class="cart__content__price">
-                            <p>33.000р</p>
-                        </div>
-                        <div class="cart__content____delete"></div>
+        <div class="cart__wrapper">
+            <div class="cart__items">
+                <div class="cart__content__item">
+                    <div class="cart__content__item__img">
+                        <img src="images/dist/teploizobor.png" alt="#">
                     </div>
-                    <div class="cart__content__item">
-                        <div class="cart__content__item__general">
-                            <div class="cart__content__item__img">
-                                <img src="images/dist/montazh.png" alt="#">
-                            </div>
-                            <div class="cart__content__item__titel">
-                                <div class="cart__content__item__titel__article">
-                                    <p>Артикул: H2357891-YR</p>
-                                </div>
-                                <div class="cart__content__item__titel__name">
-                                    <p>Кондиционер Scoole Kam-Mi24 Max</p>
-                                </div>
-                            </div>
+                    <div class="cart__content__item__titel">
+                        <div class="cart__content__item__titel__article">
+                            <p>Артикул: H2357891-YR</p>
                         </div>
-                        <div class="cart__content__quantity tovar__head__quantity">
-                            <span><img src="images/dist/minus.svg" alt="#"></span>
-                            <input type="text" value="1">
-                            <span><img src="images/dist/plus.svg" alt="#"></span>
+                        <div class="cart__content__item__titel__name">
+                            <p>Кондиционер Scoole Kam-Mi24 Max</p>
                         </div>
-                        <div class="cart__content__price">
-                            <p>33.000р</p>
-                        </div>
-                        <div class="cart__content____delete"></div>
                     </div>
+                    <div class="cart__content__quantity tovar__head__quantity">
+                        <span><img src="images/dist/minus.svg" alt="#"></span>
+                        <input type="text" value="1">
+                        <span><img src="images/dist/plus.svg" alt="#"></span>
+                    </div>
+                    <div class="cart__content__price">
+                        <p>33.000р</p>
+                    </div>
+                    <div class="cart__content____delete"></div>
+                </div>
+                <div class="cart__content__item">
+                    <div class="cart__content__item__img">
+                        <img src="images/dist/montazh.png" alt="#">
+                    </div>
+                    <div class="cart__content__item__titel">
+                        <div class="cart__content__item__titel__article">
+                            <p>Артикул: H2357891-YR</p>
+                        </div>
+                        <div class="cart__content__item__titel__name">
+                            <p>Кондиционер Scoole Kam-Mi24 Max</p>
+                        </div>
+                    </div>
+                    <div class="cart__content__quantity tovar__head__quantity">
+                        <span><img src="images/dist/minus.svg" alt="#"></span>
+                        <input type="text" value="1">
+                        <span><img src="images/dist/plus.svg" alt="#"></span>
+                    </div>
+                    <div class="cart__content__price">
+                        <p>33.000р</p>
+                    </div>
+                    <div class="cart__content____delete"></div>
                 </div>
             </div>
             <div class="cart__total">
-                <div class="cart__total__offer">
-                    <p class="cart__total__offer__offer">В вашей корзине:</p>
-                    <p class="cart__total__offer__kolvo">2 товара</p>
+                <div class="cart__total__wrapper">
+                    <p class="cart__total__offer">В вашей корзине:</p>
+                    <p class="cart__total__kolvo">2 товара</p>
                 </div>
-                <div class="cart__total__result">
-                    <p class="cart__total__result__offer">Итого</p>
-                    <p class="cart__total__result__price">38.224р</p>
+                <div class="cart__total__wrapper">
+                    <p class="cart__total__title">Итого</p>
+                    <p class="cart__total__price">38.224р</p>
                 </div>
-                <div class="cart__total__btn">
-                    <button>Оформить заказ</button>
-                </div>
+                <button class="cart__total__btn">Оформить заказ</button>
             </div>
-        </div>
-        <div class="cart__oformlenie">
-            <form action="#">
-                <div class="cart__oformlenie__pay">
-                    <div class="cart__oformlenie__offer">
-                        <h4>Выберите способ оплаты</h4>
-                    </div>
-                    <div class="cart__oformlenie__pay__items">
-                        <div class="cart__oformlenie__pay__items__item">
-                            <input type="radio" id="pay1" name="pay" class="cart__customcheckbox">
-                            <label for="pay1">Оплата при получении</label>
+            <div class="cart__oformlenie">
+                <form action="#">
+                    <div class="cart__oformlenie__pay">
+                        <div class="cart__oformlenie__offer">
+                            <h4>Выберите способ оплаты</h4>
                         </div>
-                        <div class="cart__oformlenie__pay__items__item">
-                            <input type="radio" id="pay2" name="pay" class="cart__customcheckbox">
-                            <label for="pay2">Онлайн оплата</label>
-                        </div>
-                        <div class="cart__oformlenie__pay__items__item">
-                            <input type="radio" id="pay3" name="pay" class="cart__customcheckbox">
-                            <label for="pay3">Оплата юр. лицу по счету</label>
-                        </div>
-                        <div class="cart__oformlenie__pay__items__item">
-                            <input type="radio" id="pay4" name="pay" class="cart__customcheckbox">
-                            <label for="pay4">Наличными в офисе компании</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="cart__oformlenie__information">
-                    <div class="cart__oformlenie__offer">
-                        <h4>Заполните поля ниже</h4>
-                    </div>
-                    <div class="cart__oformlenie__information__items">
-                        <div class="cart__oformlenie__information__item">
-                            <p>Фамилия*</p>
-                            <input type="text" placeholder="Ивановский">
-                        </div>
-                        <div class="cart__oformlenie__information__item">
-                            <p>Имя**</p>
-                            <input type="text" placeholder="Александр">
-                        </div>
-                        <div class="cart__oformlenie__information__item">
-                            <p>Телефон**</p>
-                            <input type="text" placeholder="+7 (922) 750-18-18">
-                        </div>
-                        <div class="cart__oformlenie__information__item">
-                            <p>E-mail*</p>
-                            <input type="text" placeholder="ivanovskiy@gmail.com">
-                        </div>
-                        <div class="cart__oformlenie__information__item cart__oformlenie__information__item__adress">
-                            <p> Адрес доставки*</p>
-                            <input type="text" placeholder="г. Название города, ул. Название улицы, 199/1, кв. 52">
+                        <div class="cart__oformlenie__pay__items">
+                            <div class="cart__oformlenie__pay__items__item">
+                                <input type="radio" id="pay1" name="pay" class="cart__customcheckbox">
+                                <label for="pay1">Оплата при получении</label>
+                            </div>
+                            <div class="cart__oformlenie__pay__items__item">
+                                <input type="radio" id="pay2" name="pay" class="cart__customcheckbox">
+                                <label for="pay2">Онлайн оплата</label>
+                            </div>
+                            <div class="cart__oformlenie__pay__items__item">
+                                <input type="radio" id="pay3" name="pay" class="cart__customcheckbox">
+                                <label for="pay3">Оплата юр. лицу по счету</label>
+                            </div>
+                            <div class="cart__oformlenie__pay__items__item">
+                                <input type="radio" id="pay4" name="pay" class="cart__customcheckbox">
+                                <label for="pay4">Наличными в офисе компании</label>
+                            </div>
                         </div>
                     </div>
-                    <div class="cart__oformlenie__information__alarm">
-                        <p>* - поля, отмеченные звёздочкой, обязательны для заполнения</p>
+                    <div class="cart__oformlenie__information">
+                        <div class="cart__oformlenie__offer">
+                            <h4>Заполните поля ниже</h4>
+                        </div>
+                        <div class="cart__oformlenie__information__items">
+                            <div class="cart__oformlenie__information__item">
+                                <p>Фамилия*</p>
+                                <input type="text" placeholder="Ивановский">
+                            </div>
+                            <div class="cart__oformlenie__information__item">
+                                <p>Имя*</p>
+                                <input type="text" placeholder="Александр">
+                            </div>
+                            <div class="cart__oformlenie__information__item">
+                                <p>Телефон*</p>
+                                <input type="text" placeholder="+7 (922) 750-18-18">
+                            </div>
+                            <div class="cart__oformlenie__information__item">
+                                <p>E-mail*</p>
+                                <input type="text" placeholder="ivanovskiy@gmail.com">
+                            </div>
+                            <div class="cart__oformlenie__information__item cart__oformlenie__information__item__adress">
+                                <p> Адрес доставки*</p>
+                                <input type="text" placeholder="г. Название города, ул. Название улицы, 199/1, кв. 52">
+                            </div>
+                        </div>
+                        <div class="cart__oformlenie__information__alarm">
+                            <p>* - поля, отмеченные звёздочкой, обязательны для заполнения</p>
+                        </div>
                     </div>
-                </div>
-            </form>
-        </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>

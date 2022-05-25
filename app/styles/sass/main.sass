@@ -192,22 +192,17 @@
 .popular__arrows
     margin-bottom: 30px
 
-.slick-track
-    display: grid !important
-    grid-template-rows: 1fr !important
-    grid-auto-flow: column !important
-    align-items: start
-    align-content: start
-    gap: 30px
 .popular__item
-    box-sizing: border-box
-    min-width: 320px
+    margin-right: 30px
+    box-sizing: margin-box
     aspect-ratio: 1/1.345
     position: relative
     display: grid !important
     grid-template-rows: 1fr 1fr
     background: #fff
     border: 3px solid transparent
+    &:first-child
+        margin-left: 15px
     &:last-child
         margin-right: 0
     &:hover
@@ -282,8 +277,9 @@
         width: 16px
         height: 28px
         background: url(../images/dist/prev.svg)
-        left: 20px
-        top: 24px
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
 .ArrowNext
     width: 60px
     height: 73px
@@ -297,38 +293,96 @@
         width: 16px
         height: 28px
         background: url(../images/dist/next.svg)
-        right: 20px
-        top: 24px
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+
+@media (max-width: 730px)
+    .popular__item__disc
+        p
+            font-size: 20px
+    .popular__item__price
+        p
+            font-size: 22px
+
+@media (max-width: 690px)
+    .popular__item::hover
+        .popular__item__price
+            p
+                margin-top: 5px
+    .ArrowNext
+        width: 40px
+        height: 50px
+    .ArrowPrev
+        width: 40px
+        height: 50px
+@media (max-width: 630px)
+    .popular__item__disc
+        p
+            font-size: 25px
+    .popular__item__price
+        p
+            font-size: 25px
+    .popular__item__price
+        p
+            margin-top: 50px
+
+
+.about__wrapper
+    margin: 60px 0 87px
+    &::before
+        display: none
+@media (max-width: 1600px)
+    .about__text
+        p
+            font-size: 18px !important
+@media (max-width: 1400px)
+    .about__text
+        p
+            font-size: 16px !important
+
+
+
+
+
+
+
 .certificates
-    padding-bottom: 142px
+    padding: 87px 0
 .certificates__items
-    display: flex
-    justify-content: space-between
-    flex-wrap: wrap
+    display: grid
+    grid-template-columns: repeat( auto-fill, minmax(280px, 1fr))
+    gap: 25px
+    align-items: center
+    justify-items: center
+    justify-content: center
 .certificates__item
-    max-width: 383px
-    max-height: 527px
     img
         width: 100%
         object-fit: contain
+
+
+
 footer
     background: #4F98C8
     padding-top: 80px
-    padding-bottom: 74px
+    padding-bottom: 50px
 .footer__items
-    display: flex
+    display: grid
+    grid-template-columns: repeat(3, max-content)
     justify-content: space-between
 .footer__menu
-    display: flex
+    display: grid
+    grid-auto-flow: column
+    gap: 50px
 .footer__menu__item__offer
     font-family: 'Roboto'
-    font-style: normal
     font-weight: 500
-    font-size: 30px
+    font-size: 25px
     color: #FFFFFF
     margin-bottom: 30px
 .footer__menu__item
-    margin-right: 56px
+    position: relative
     &:last-child
         margin-right: 0
 .footer__menu__item__links
@@ -342,44 +396,45 @@ footer
                 font-family: 'Roboto'
                 font-style: norma
                 font-weight: 500
-                font-size: 25px
+                font-size: 18px
                 color: #FFFFFF
                 text-decoration: none
                 &:hover
                     color: #FFF38B
 .footer__contacts
-    display: flex
-    flex-direction: column
+    display: grid
+    gap: 25px
+    align-items: center
+    align-content: center
+    text-align: right
 .footer__contacts__popup
     a
         display: flex
         justify-content: center
         align-items: center
-        width: 239px
-        height: 56px
+        padding: 13px 45px
         border: 3px solid #FFF38B
         font-family: 'Roboto'
         font-style: normal
         font-weight: 500
-        font-size: 25px
+        font-size: 20px
         color: #FFF38B
         text-decoration: none
 .footer__contacts__phone
-    margin-bottom: 30px
-    margin-top: 30px
     a
         text-decoration: none
         font-family: 'Roboto'
         font-style: normal
-        font-weight: 70
-        font-size: 30px
+        font-weight: 700
+        font-size: 25px
         color: #FFFFFF
+        letter-spacing: 0.02em
 .footer__contacts__mail
     a
         font-family: 'Roboto'
         font-style: normal
         font-weight: 500
-        font-size: 25px
+        font-size: 18px
         color: #FFFFFF
         opacity: 0.7
         text-decoration: none
@@ -387,8 +442,7 @@ footer
     width: 100%
     height: 2px
     background: rgba(255, 255, 255, 0.3)
-    margin-top: 70px
-    margin-bottom: 50px
+    margin: 40px 0
 .footer__docs
     display: flex
     justify-content: space-between
@@ -396,14 +450,131 @@ footer
         font-family: 'Roboto'
         font-style: normal
         font-weight: 500
-        font-size: 25px
-        line-height: 29px
+        font-size: 20px
         color: #FFFFFF
         opacity: 0.7
         text-decoration: none
+
+@media (max-width: 1180px)
+    .footer__items
+        grid-template-columns: repeat(2, max-content)
+        gap: 40px 60px
+    .footer__menu
+        grid-column: 1/2
+
+    .footer__contacts
+        grid-row: 1/3
+        grid-column: 2/3
+
+    .footer__contacts__popup
+        a
+            padding: 10px 15px
+            font-size: 18px
+
+@media (max-width: 850px)
+    .footer__items
+        grid-template-columns: 1fr
+    .footer__contacts
+        grid-column: 1/2
+        grid-row: 3/4
+        justify-self: left
+        text-align: left
+        grid-template-columns: repeat(2, max-content)
+        gap: 2px 20px
+        .footer__contacts__popup
+            grid-row: 1/3
+            grid-column: 2/3
+
+    .footer__docs
+        a
+            font-size: 18px
+@media (max-width: 675px)
+    .footer__docs
+        flex-direction: column-reverse
+        gap: 10px
+        text-align: left
+@media (max-width: 580px)
+    footer
+        padding-top: 50px
+    .footer__logo
+        display: none
+    .footer__contacts
+        grid-row: 1/2
+        justify-self: stretch
+        justify-content: space-between
+        text-align: left
+    .footer__contacts__phone
+        a
+            font-size: 24px
+            letter-spacing: 0
+    .footer__menu
+        grid-auto-flow: row
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr))
+    .footer__docs
+        text-align: left
+    .footer__line
+        margin: 20px 0
+@media (max-width: 450px)
+    .footer__contacts__popup
+        display: none
+    .footer__contacts__mail
+        grid-column: 1/2
+
+
 .cart
-    // background: #E5E5E5
-    padding-bottom: 62px
+    background: #f3f5f8
+    padding: 50px 0 87px
+
+.cart__wrapper
+    margin-top: 30px
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 30px 62px
+.cart__items
+    grid-column: 1/3
+    display: grid
+    gap: 30px
+.cart__total
+    grid-column: 3/4
+    padding: 40px 48px
+    background-color: #fff
+    align-self: self-start
+    display: grid
+    gap: 20px
+    &__wrapper
+        display: grid
+        grid-auto-flow: column
+        justify-content: space-between
+        gap: 10px
+        align-items: end
+        font-family: 'Roboto', sans-serif
+        color: #383838
+        font-weight: 700
+    &__offer
+        font-size: 25px
+    &__kolvo
+        opacity: 0.7
+        font-size: 25px
+    &__title
+        font-size: 30px
+        opacity: 0.7
+    &__price
+        font-size: 40px
+
+
+.cart__content__item
+    position: relative
+    height: 148px
+    padding: 18px 48px
+    display: grid
+    gap: 30px
+    grid-template-columns: 150px 2fr 1fr 1fr 20px
+    background-color: #fff
+    align-items: center
+    overflow: hidden
+
+.cart__oformlenie
+    grid-column: 1/3
 .cart__offer
     padding-bottom: 62px
     h3
@@ -413,37 +584,13 @@ footer
         font-size: 40px
         text-transform: uppercase
         color: #383838
-.cart__items
-    display: flex
-    justify-content: space-between
-    position: relative
-    padding-bottom: 62px
-.cart__content
-    width: 66.5%
-.cart__total
-    width: 31.5%
-    background: #fff
-    height: 100%
-    border: 1px solid #f3f5f8
-.cart__content__item
-    width: 100%
-    background: #fff
-    height: 148px
-    margin-bottom: 30px
-    display: flex
-    align-items: center
-    justify-content: space-around
-    border: 1px solid #f3f5f8
-    &:last-child
-        margin-bottom: 0
-.cart__content__item__general
-    height: 100%
-    display: flex
-    align-items: center
 .cart__content__item__img
-    width: 200px
-    height: 135px
-    margin-right: 40px
+    width: 100%
+    height: 100%
+    overflow: hidden
+    display: flex
+    align-items: center
+    justify-content: center
     img
         width: 100%
         height: 100%
@@ -458,6 +605,7 @@ footer
         opacity: 0.6
 .cart__content__item__titel__name
     margin-top: 10px
+    text-overflow: ellipsis
     p
         font-family: 'Roboto'
         font-style: normal
@@ -466,10 +614,9 @@ footer
         color: #383838
         opacity: 0.7
         max-width: 244px
-.cart__content__quantity
-    margin-top: 0!important
 .cart__content__price
     font-family: 'Roboto'
+    text-align: center
     font-style: normal
     font-weight: 500
     font-size: 25px
@@ -491,59 +638,16 @@ footer
     &:hover
         &::before
             background: url(../images/dist/deletered.svg)
-.cart__total__offer
-    display: flex
-    justify-content: space-between
-    margin-top: 40px
-.cart__total__offer__offer
-    font-family: 'Roboto'
-    font-style: normal
-    font-weight: 700
-    font-size: 25px
-    color: #383838
-    padding-left: 48px
-.cart__total__offer__kolvo
-    font-family: 'Roboto'
-    font-style: normal
-    font-weight: 700
-    font-size: 25px
-    color: #383838
-    padding-right: 48px
-    opacity: 0.7
-.cart__total__result
-    display: flex
-    justify-content: space-between
-    margin-top: 20px
-.cart__total__result__offer
-    font-family: 'Roboto'
-    font-style: normal
-    font-weight: 700
-    font-size: 30px
-    color: #383838
-    opacity: 0.7
-    padding-left: 48px
-.cart__total__result__price
-    font-family: 'Roboto'
-    font-style: normal
-    font-weight: 700
-    font-size: 40px
-    color: #383838
-    padding-right: 48px
 .cart__total__btn
-    display: flex
-    justify-content: center
-    padding-bottom: 40px
-    button
-        width: 424px
-        height: 56px
-        background: linear-gradient(91deg, #63ABDB 0%, #40CDD6 100%)
-        border: none
-        font-family: 'Roboto'
-        font-style: normal
-        font-weight: 500
-        font-size: 18px
-        color: #FFFFFF
-        margin-top: 20px
+    width: 100%
+    padding: 17px
+    cursor: pointer
+    background: linear-gradient(91deg, #63ABDB 0%, #40CDD6 100%)
+    border: none
+    font-family: 'Roboto'
+    font-weight: 500
+    font-size: 18px
+    color: #FFFFFF
 .cart__oformlenie
     background: #FFFFFF
     padding-left: 48px
@@ -560,15 +664,10 @@ footer
         font-size: 25px
         color: #383838
 .cart__oformlenie__pay__items
-    display: flex
-    flex-wrap: wrap
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 15px 20px
 .cart__oformlenie__pay__items__item
-    width: 50%
-    margin-bottom: 20px
-    &:nth-child(3n)
-        margin-bottom: 0
-    &:last-child
-        margin-bottom: 0
     label
         font-family: 'Roboto'
         font-style: normal
@@ -602,7 +701,7 @@ footer
 .cart__oformlenie__information__item__adress
     width: 100%!important
 .cart__oformlenie__information__item
-    width: 43%
+    width: 100%
     margin-bottom: 16px
     p
         font-family: 'Roboto'
@@ -613,8 +712,8 @@ footer
         opacity: 0.7
         margin-bottom: 6px
     input
-        width: 445px
         height: 41px
+        padding-right: 10px
         background: #F3F5F8
         border: none
         outline: none
@@ -629,11 +728,13 @@ footer
     &:last-child
         margin-bottom: 0
 .cart__oformlenie__information__items
-    display: flex
-    flex-wrap: wrap
-    justify-content: space-between
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 25px
+
+.cart__oformlenie__information__item:last-child
+    grid-column: 1/3
 .cart__oformlenie__information__alarm
-    margin-top: 20px
     p
         font-family: 'Roboto'
         font-style: normal
@@ -641,29 +742,88 @@ footer
         font-size: 16px
         color: #383838
         opacity: 0.5
+
+@media (max-width: 1440px)
+    .cart__wrapper
+        gap: 30px
+        grid-template-columns: 1fr 1fr 30%
+    .cart__total__title
+        font-size: 25px
+    .cart__total__price
+        font-size: 30px
+    .cart__total__offer, .cart__total__kolvo
+        font-size: 20px
+    .cart__content__price
+        p
+            font-size: 20px
+    .cart__content__item
+        grid-template-columns: 120px 2fr 1fr 1fr 20px
+
+@media (max-width: 1240px)
+    .cart__items
+        grid-column: 1/4
+        grid-row: 1/2
+    .cart__oformlenie
+        grid-row: 2/3
+        grid-column: 1/4
+    .cart__total
+        grid-column: 1/3
+        grid-row: 3/4
+@media (max-width: 730px)
+    .cart__content__item
+        grid-template-columns: 2fr 1fr 1fr 20px
+        gap: 20px
+        padding: 18px 26px
+    .cart__content__item__img
+        display: none
+@media (max-width: 630px)
+    .cart__total
+        grid-column: 1/4
+    .cart__content__item
+        height: 128px
+    .cart__oformlenie__pay__items
+        grid-template-columns: 1fr
+    .cart__content__price
+        position: absolute
+        right: 30px
+        bottom: 15px
+    .cart__content__item__titel__article
+        position: absolute
+        left: 26px
+        top: 22px
+    .cart__content__item
+        grid-template-columns: 2fr 1fr 20px
+    .cart__oformlenie__information__items
+        grid-template-columns: 1fr
+        gap: 0
+    .cart__oformlenie__information__item:last-child
+        grid-column: 1/2
+
+
+
 .category
-    padding-bottom: 62px
+    padding: 50px 0 87px
 .tegs
     background: #FFFFFF
     margin-bottom: 60px
     border: 1px solid #F3F5F8
 .category__block
-    display: flex
-    justify-content: space-between
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 30px
     position: relative
 .category__filters
-    margin-right: 30px
-    // width: 139.9%
-    top: 0px
+    width: 100%
     display: flex
     flex-direction: column
     justify-content: space-between
+    background-color: #fff
     form
         border-top: 1px solid #F3F5F8
         border-left: 1px solid #F3F5F8
         border-right: 1px solid #F3F5F8
 .category__filters__button
-    margin-top: 15px
+    margin: 15px 30px 0
     input
         width: 100%
         height: 56px
@@ -688,25 +848,12 @@ footer
         color: #383838
         opacity: 1
 .category__items__list
-    display: flex
-    flex-wrap: wrap
-.category__item
-    width: 382px
-    height: 542px
-    background: #fff
-    margin-right: 30px
-    margin-bottom: 30px
-    border: 1px solid #F3F5F8
-    &:nth-child(3n)
-        margin-right: 0
-    a
-        text-decoration: none
-        width: 100%
-        height: 100%
-        display: flex
-        flex-direction: column
-    &:hover
-        border: 1px solid #3089C5
+    display: grid
+    grid-column: 2/5
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))
+    gap: 30px
+    .popular__item
+        margin: 0 !important
 .tegs__line
     width: 100%
     height: 2px
@@ -737,8 +884,9 @@ footer
             margin-right: 0
 .tegs__filter
     display: flex
-    padding-bottom: 30px
-    padding-left: 40px
+    align-items: center
+    flex-wrap: wrap
+    gap: 20px 45px
 .tegs__sort__offer
     margin-right: 6px
     p
@@ -767,6 +915,17 @@ footer
             height: 5px
             right: 0
             top: 8px
+
+.tegs__settings
+    font-size: 18px
+    border: none
+    font-weight: 500
+    height: 45px
+    padding: 12px 35px
+    background: #3089c5
+    color: #fff
+    cursor: pointer
+    display: none
 .tegs__kolvo__offer
     margin-right: 6px
     p
@@ -788,7 +947,6 @@ footer
         margin-right: 6px
 .tegs__sort
     display: flex
-    margin-right: 62px
 .tegs__kolvo
     display: flex
 .tegs__kolvo__items
@@ -803,6 +961,11 @@ footer
     background: #eee
     height: 300px
     display: none
+
+
+
+
+
 // Аккардеон
 .accordion
     background: #fff
@@ -1197,13 +1360,16 @@ input[type="range"]
 .tovar__head__quantity
     display: flex
     align-items: center
-    width: 170px
-    height: 57px
+    width: 108px
+    height: 45px
     background: #DEDEDE
-    justify-content: space-around
+    justify-content: space-evenly
     span
         display: flex
         align-items: center
+        justify-content: center
+        img
+            width: 10px
     input
         width: 40px
         height: 100%
@@ -1214,7 +1380,7 @@ input[type="range"]
         font-family: 'Roboto'
         font-style: normal
         font-weight: 500
-        font-size: 25px
+        font-size: 18px
         color: #383838
         opacity: 0.7
 .tovar__vivod
@@ -1328,11 +1494,48 @@ input[type="range"]
                 color: #383838
                 opacity: 0.7
                 width: 50%
+
+
+@media (max-width: 1140px)
+    .category__items__list
+        gap: 20px
+@media (max-width: 1090px)
+    .tegs__settings
+        display: block
+    .tegs__items
+        display: none
+    .category__filters
+        position: fixed
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        z-index: 10
+        padding-bottom: 20px
+        overflow: hidden
+        display: none
+    .category__filters__open
+        display: block !important
+    .category__items__list
+        grid-column: 1/5
+@media (max-width: 960px)
+    .category__items__amount
+        flex-direction: column
+        align-items: center
+    .category__items__amount__kolvo, .category__items__amount__list
+        padding: 0
+
+
+
 .contacts
-    margin-bottom: 95px
+    margin-bottom: 82px
 .contacts__items
-    display: flex
-    justify-content: space-between
+    display: grid
+    grid-template-columns: 42% 1fr
+    gap: 60px
+    margin-top: 32px
+.contacts__items__info
+    padding: 25px 0
 .contacts__offer
     h1
         font-family: 'Rubik'
@@ -1341,27 +1544,18 @@ input[type="range"]
         font-size: 40px
         text-transform: uppercase
         color: #383838
-.contacts__map
-    height: 536px
-    width: 835px
-.contacts__items
-    display: flex
-    justify-content: space-between
-    padding-top: 78px
-.contacts__items__map
-    width: 835px
-    max-width: 835px
-    height: 536px
+
+.contacts__items__info__content
+    display: grid
+    gap: 15px
 .contacts__info__phone
     display: flex
 .contacts__info__disc
-    margin-bottom: 10px
     p
         font-family: 'Roboto'
-        font-style: normal
-        font-weight: 400
         font-size: 25px
         color: #2A2A2C
+        line-height: 30px
     a
         font-family: 'Roboto'
         font-style: normal
@@ -1371,7 +1565,7 @@ input[type="range"]
         text-decoration: none
         margin-left: 9px
 .contacts__links__offer
-    margin-top: 61px
+    margin-top: 60px
     margin-bottom: 20px
     p
         font-family: 'Roboto'
@@ -1380,52 +1574,73 @@ input[type="range"]
         font-size: 16px
         color: #2A2A2C
 .contacts__links__items
-    display: flex
-.contacts__links__items
-    a
-        margin-right: 19px
-        &:last-child
-            margin-right: 0
+    display: grid
+    grid-template-columns: repeat(auto-fit, 47px)
+    gap: 15px
+    img
+        width: 47px
+        height: 47px
+
+@media (max-width: 1280px)
+    .contacts__items
+        grid-template-columns: 1fr
+        gap: 12px
+    .contacts__map
+        grid-row: 1/2
+        width: 80%
+        justify-self: center
+        height: 360px
+    .contacts__links__offer
+        display: none
+    .contacts__links__items
+        margin-top: 20px
+
+@media (max-width: 800px)
+    .contacts__map
+        width: 100%
+@media (max-width: 580px)
+    .contacts__items__info__content
+        gap: 10px
+    .contacts__info__disc
+        a
+            font-size: 20px
+        p
+            font-size: 20px
+@media (max-width: 480px)
+    .contacts__links__items
+        gap: 10px
         img
-            width: 47px
-            height: 47px
-.about__inner
-    margin-bottom: 121px
-.about__offer
-    h1
-        font-family: 'Rubik'
-        font-style: normal
-        font-weight: 700
-        font-size: 40px
-        text-transform: uppercase
-        color: #383838
-.about__discription
-    margin-top: 55px
-    margin-bottom: 100px
-    display: flex
-    justify-content: center
-.about__discription__info
-    margin-right: 80px
-    p
-        font-family: 'Roboto'
-        font-style: normal
-        font-weight: 500
-        font-size: 18px
-        color: #383838
-        opacity: 0.7
-        max-width: 496px
-        margin-bottom: 28px
-        &:last-child
-            margin-bottom: 0
+            width: 42px
+            height: 42px
+
+.about__benefits
+    margin: 82px 0
+    &__items
+        display: grid
+        grid-template-columns: 22% 1fr
+        align-items: center
+        justify-items: center
+        gap: 60px
+        transform: translateX(3.5%)
+.about__benefits__disc
+    display: grid
+    gap: 20px
+
 .about__benefits__img
     position: relative
-.about__benefits__img__back
-    position: absolute
-    width: 103%
-    height: 80%
-    top: -30px
-    background: #3089C5
-    z-index: -1
+    width: 97%
+    &::before
+        content: ''
+        position: absolute
+        top: -35px
+        left: 0
+        width: 103%
+        height: 90%
+        background-color: #4f98c8
+        z-index: -1
+    img
+        width: 100%
+        object-fit: cover
 .benefits__offer
     margin-bottom: 85px
     h2
@@ -1443,14 +1658,9 @@ input[type="range"]
         font-size: 18px
         color: #383838
         opacity: 0.7
-.about__benefits__items
-    display: flex
-    justify-content: center
-    align-items: center
-.about__benefits__disc
-    margin-right: 80px
+
+
 .about__benefits__item
-    margin-bottom: 40px
     span
         font-family: 'Rubik'
         font-style: normal
@@ -1465,13 +1675,31 @@ input[type="range"]
         font-size: 18px
         color: #383838
         opacity: 0.7
-        max-width: 165px
+        width: 100%
 
 
 
+@media (max-width: 840px)
+    .about__benefits
+        margin: 40px 0 82px
+    .about__benefits__items
+        grid-template-columns: 1fr
+    .about__benefits__img
+        display: none
+    .about__benefits__disc
+        width: 100%
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 40px
+        justify-content: space-around
+    .about__benefits__item
+        span
+            font-size: 40px
+        p
+            font-size: 24px
 
-
-
+@media (max-width: 560px)
+    .about__benefits__disc
+        grid-template-columns: 1fr
 
 @import config
 @import 'blocks/**/*'
