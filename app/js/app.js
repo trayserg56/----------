@@ -49,17 +49,47 @@ document.addEventListener('DOMContentLoaded', () => {
 		// prevArrow: '<div class="ArrowPrev"></div>',
 		// nextArrow: '<div class="ArrowNext"></div>',
 	});
+
+
+
 	$('.popular__items').slick({
 		slidesToShow: 4,
-		slidesToScroll: 1,
-		// asNavFor: '.slider-for',
-		// dots: false,
+		slidesToScroll: 4,
 		arrows: true,
 		infinite: false,
 		appendArrows: $(".arrovsprojects"),
 		prevArrow: '<div class="ArrowPrev"></div>',
 		nextArrow: '<div class="ArrowNext"></div>',
+		responsive: [
+			{
+			breakpoint: 1024,
+			settings: {
+				slidesToShow: 3,
+				slidesToScroll: 3,
+				infinite: true,
+				dots: true
+			}
+			},
+			{
+			breakpoint: 600,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 2
+			}
+			},
+			{
+			breakpoint: 480,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			}
+			}
+		]
 	});
+
+
+
+
 	// Аккардеон
 	var acc = document.getElementsByClassName("accordion");
 	var i;
@@ -80,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 	}
 	// Аккардеон
-	
+
 	// PriceRange
 	const rangeInput = document.querySelectorAll(".range-input input"),
 	priceInput = document.querySelectorAll(".price-input input"),
@@ -91,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		input.addEventListener("input", e =>{
 			let minPrice = parseInt(priceInput[0].value),
 			maxPrice = parseInt(priceInput[1].value);
-			
+
 			if((maxPrice - minPrice >= priceGap) && maxPrice <= rangeInput[1].max){
 				if(e.target.className === "input-min"){
 					rangeInput[0].value = minPrice;
@@ -130,4 +160,3 @@ $(".category__filters__manufacturer__item").click(function(){
 
 
 })
-
