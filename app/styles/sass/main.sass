@@ -4,12 +4,36 @@
 *
     margin: 0
     padding: 0
+.header__screen
+    position: relative
+    &::before
+        content: ''
+        position: absolute
+        width: 85%
+        top: 0
+        height: 1px
+        background-color: #fff
+        bottom: 0px
+        left: 50%
+        transform: translateX(-50%)
 .limiter
     max-width: 1620px
     width: 85%
     margin: 0 auto
     position: relative
-
+.slick-prev
+    display: none!important
+.slick-next
+    display: none!important
+.main__offer__disc
+    margin-bottom: 62px
+.main__offer__button
+    a
+        &:hover
+            background: #3089c5
+            color: #fff
+.popular__inner
+    padding-bottom: 30px
 @media (max-width: 920px)
     .limiter
         width: 92%
@@ -109,6 +133,9 @@
         font-size: 18px
         color: #3089C5
         text-decoration: none
+        &:hover
+            background: #3089C5
+            color: #fff
 .about__limiter__line
     background: #C9D0DB
     opacity: 0.5
@@ -200,24 +227,15 @@
     display: grid !important
     grid-template-rows: 1fr 1fr
     background: #fff
-    border: 3px solid transparent
-    &:first-child
-        margin-left: 15px
+    border: 1px solid #f3f5f8
     &:last-child
         margin-right: 0
     &:hover
-        border: 3px solid #3089C5
-        .popular__item__buy
-            display: block
-            bottom: 30px
-            opacity: 1
-        .popular__item__disc
-            p
-                margin-top: 0
-        .popular__item__price
-            p
-                margin-top: 25px
-
+        border: 1px solid #3089C5
+        button
+            background: #3089C5
+            color: #fff
+        
 .popular__item__img
     align-self: center
     padding: 0 10px
@@ -226,19 +244,20 @@
         object-fit: contain
         object-position: center
 .popular__item__disc
-        p
-            margin-top: 15px
-            padding: 0 20px
-            text-align: center
-            font-family: 'Roboto'
-            font-style: normal
-            font-weight: 500
-            font-size: 25px
-            color: #383838
-            transition: all .3s ease-in-out
-.popular__item__price
+    display: flex
+    justify-content: center
     p
-        margin-top: 45px
+        text-align: center
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 25px
+        color: #383838
+        transition: all .3s ease-in-out
+        max-width: 244px
+.popular__item__price
+    margin-top: 30px
+    p
         font-family: 'Roboto'
         text-align: center
         font-style: normal
@@ -247,19 +266,21 @@
         color: #383838
         transition: all .3s ease-in-out
 .popular__item__buy
-    opacity: 0
-    position: absolute
-    bottom: 0px
-    left: 50%
-    transform: translateX(-50%)
-    width: 138px
-    height: 40px
-    background: #3089C5
-    border: none
-    font-weight: 500
-    font-size: 20px
-    color: #FFFFFF
-    transition: all .3s ease-in-out
+    display: flex
+    justify-content: center
+    align-items: center
+    button
+        width: 158px
+        height: 56px
+        border: 2px solid #3089C5
+        background: #fff
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 500
+        font-size: 25px
+        color: #3089C5
+        margin-top: 30px
+        cursor: pointer
 .arrovsprojects
     display: flex
 .ArrowPrev
@@ -325,7 +346,7 @@
             font-size: 25px
     .popular__item__price
         p
-            margin-top: 50px
+            margin-top: 25px
 
 
 .about__wrapper
@@ -887,6 +908,8 @@ footer
     align-items: center
     flex-wrap: wrap
     gap: 20px 45px
+    padding-left: 30px
+    padding-bottom: 30px
 .tegs__sort__offer
     margin-right: 6px
     p
@@ -1245,6 +1268,7 @@ input[type="range"]
     width: 100%
     height: 110px
     border: 1px solid #f3f5f8
+    margin-top: 30px
 .category__items__amount__list
     padding-left: 30px
 .category__items__amount__kolvo
@@ -1291,7 +1315,7 @@ input[type="range"]
     margin-bottom: 163px
 .tovar__head__image
     max-width: 574px
-    margin-top: 88px
+    // margin-top: 88px
     position: relative
     margin-right: 152px
 .tovar__head__disc
@@ -1520,6 +1544,8 @@ input[type="range"]
         grid-column: 1/5
 @media (max-width: 960px)
     .category__items__amount
+        padding-top: 20px
+        padding-bottom: 10px
         flex-direction: column
         align-items: center
     .category__items__amount__kolvo, .category__items__amount__list
@@ -1696,10 +1722,58 @@ input[type="range"]
             font-size: 40px
         p
             font-size: 24px
-
+    header
+        height: 100%!important
+    .header__menu
+        padding-top: 30px
+        padding-bottom: 30px
+    .header__screen
+        height: 100%!important
+        padding-bottom: 30px
+        padding-top: 30px
+    .header__disc__describe
+        h2
+            line-height: unset!important
+    .tovar__head
+        flex-direction: column
+    .tovar__head__image
+        margin-right: 0
+        max-width: 100%
+        margin-top: 0
+    .tovar__swiper__big__item
+        max-height: 400px!important
+    .swiper-button-next
+        right: 0!important
+    .swiper-button-prev
+        left: 0!important
+    .tovar__head
+        padding-right: 20px
+        padding-left: 20px
+        padding-top: 25px
+    .tovar__swiper__big__item
+        img
+            width: 100%
+            height: 100%
+            object-fit: contain
+    .swiper__small
+        max-width: 100%
 @media (max-width: 560px)
     .about__benefits__disc
         grid-template-columns: 1fr
-
+    .header__content__slide__disc
+        padding: 0!important
+        gap: 10px!important
+    .header__disc__button
+        margin-top: 15px
+    .main__offer__disc
+        margin-bottom: 20px
+    .tovar__swiper__big__item
+        max-height: 200px!important
+    .tovar__head__disc
+        width: 100%
+    .swiper-button-next
+        top: 100px!important
+    .swiper-button-prev
+        top: 100px!important
 @import config
 @import 'blocks/**/*'

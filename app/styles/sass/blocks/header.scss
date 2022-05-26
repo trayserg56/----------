@@ -1,18 +1,18 @@
 header{
     background: linear-gradient(104.11deg, #63ABDB 0%, #40CDD6 80.17%);
-    height: 16vh;
+    height: 22vh;
     position: relative;
 
-    &::after{
-        content: '';
-        position: absolute;
-        width: 85%;
-        height: 1px;
-        background-color: #fff;
-        bottom: 0px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+    // &::after{
+    //     content: '';
+    //     position: absolute;
+    //     width: 85%;
+    //     height: 1px;
+    //     background-color: #fff;
+    //     bottom: 0px;
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    // }
 }
 
 @media (max-width: 920px) {
@@ -107,7 +107,7 @@ header{
 
         &::placeholder{
             color: #fff;
-            opacity: .5;
+            opacity: 1;
         }
     }
 
