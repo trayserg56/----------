@@ -1,25 +1,14 @@
 header{
     background: linear-gradient(104.11deg, #63ABDB 0%, #40CDD6 80.17%);
-    height: 22vh;
+    height: 16vh;
+    min-height: 130px;
     position: relative;
 
-    // &::after{
-    //     content: '';
-    //     position: absolute;
-    //     width: 85%;
-    //     height: 1px;
-    //     background-color: #fff;
-    //     bottom: 0px;
-    //     left: 50%;
-    //     transform: translateX(-50%);
-    // }
+    display: flex;
+    align-items: center;
 }
 
-@media (max-width: 920px) {
-    header::after{
-        width: 92%;
-    }
-}
+
 .header__screen{
     background: linear-gradient(104.11deg,#63abdb,#40cdd6 80.17%);
     height: 84vh;
@@ -32,7 +21,12 @@ header{
     gap: 2%;
     align-items: center;
     justify-content: space-between;
-    padding-top: 32px;
+}
+
+@media (max-width: 920px) {
+    .header__screen::before{
+        width: 92% !important;
+    }
 }
 
 // Katalog btn
@@ -231,6 +225,8 @@ header{
     display: none;
     background: #308AC5;
     border: none;
+    font-weight: 500;
+    font-family: 'Roboto';
     padding: 16px 12px 17px 50px;
     font-weight: 500;
     font-size: 18px;
@@ -340,7 +336,7 @@ header{
         }
     }
 }
-@media (max-width: 860px) {
+@media (max-width: 1200px) {
     .header__menu__nav ul {
         width: 0;
         overflow: hidden;

@@ -164,6 +164,9 @@ $("#defFilters-btn").click(function(){
 $("#addFilters-btn").click(function(){
 	$(".category__filters").removeClass("category__filters__open");
 });
+$("#filter__close").click(function(){
+	$(".category__filters").removeClass("category__filters__open");
+});
 
 $("#burger-btn").click(function(){
 	$(".menu__list").toggleClass("menu__opened");
