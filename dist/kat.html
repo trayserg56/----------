@@ -31,11 +31,13 @@
                 </a>
             </div>
             <nav class="header__menu__nav">
-                <button id="burger-btn" class="menu__burger">Menu</button>
+                <button id="burger-btn" class="menu__burger">Меню</button>
                 <ul class="menu__list">
-                    <li><a href="kat.html" class="menu__katalog">Каталог</a></li>
+                    <li><a href="catalog.html" class="menu__katalog">Каталог</a></li>
                     <li><a href="about.html">О нас</a></li>
                     <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="kat.html">Популярное</a></li>
+                    <li><a href="contacts.html">Для дома</a></li>
                     <div class="menu__search">
                         <input
                             class="menu__search_input"
@@ -122,6 +124,10 @@
                         <p>Сортировать:</p>
                     </div>
                     <div class="tegs__sort__items">
+                        <!-- <select>
+                            <option value="0">По популярности</option>
+                            <option value="1">По цене</option>
+                        </select> -->
                         <a href="#">По популярности</a>
                         <div class="tegs__sort__items__submenu">
                             <p>sdfsdfdsfsdfsdfdsf</p>
@@ -143,13 +149,20 @@
         </div>
         <div class="category__block">
 <div class="category__filters">
-    <form action="#">
+    <form>
         <div class="category__filters__items">
             <div class="category__filters__items__offer">
                 <p>Фильтры</p>
             </div>
+            <div id="filter__close" class="filter__close">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    width="24px" height="24px" viewBox="0 0 94.926 94.926">
+                    <path d="M55.931,47.463L94.306,9.09c0.826-0.827,0.826-2.167,0-2.994L88.833,0.62C88.436,0.224,87.896,0,87.335,0   c-0.562,0-1.101,0.224-1.498,0.62L47.463,38.994L9.089,0.62c-0.795-0.795-2.202-0.794-2.995,0L0.622,6.096   c-0.827,0.827-0.827,2.167,0,2.994l38.374,38.373L0.622,85.836c-0.827,0.827-0.827,2.167,0,2.994l5.473,5.476   c0.397,0.396,0.936,0.62,1.498,0.62s1.1-0.224,1.497-0.62l38.374-38.374l38.374,38.374c0.397,0.396,0.937,0.62,1.498,0.62   s1.101-0.224,1.498-0.62l5.473-5.476c0.826-0.827,0.826-2.167,0-2.994L55.931,47.463z" />
+                </svg>
+            </div>
             <div class="category__filters__item">
-                <button class="accordion active">Цена</button>
+                <!-- <input type="button" value="Цена" class="accordion active"> -->
+                <div class="accordion active"><p>Цена</p></div>
                     <div class="panel" style="display: block">
                         <div class="wrapper">
                             <div class="price-input">
@@ -174,7 +187,8 @@
                     </div>
             </div>
             <div class="category__filters__item category__filters__manufacturer">
-                <button class="accordion">Производитель</button>
+                <!-- <button class="accordion">Производитель</button> -->
+                <div class="accordion"><p>Цена</p></div>
                     <div class="panel filters__manufacturer__panel" data-simplebar>
                         <div class="category__filters__manufacturer__item">
                             <label for="1">ываывавыа</label>
@@ -219,13 +233,15 @@
                     </div>
             </div>
             <div class="category__filters__item">
-                <button class="accordion">Площадь покрытия</button>
+                <!-- <button class="accordion">Площадь покрытия</button> -->
+                <div class="accordion"><p>Цена</p></div>
                 <div class="panel">
                 <p>Lorem ipsum...</p>
                 </div>
             </div>
             <div class="category__filters__item">
-                <button class="accordion">Дополнительные функции</button>
+                <!-- <button class="accordion">Дополнительные функции</button> -->
+                <div class="accordion"><p>Цена</p></div>
                 <div class="panel">
                 <p>Lorem ipsum...</p>
                 </div>
@@ -252,7 +268,9 @@
                             <div class="popular__item__price">
                                 <p>40.000р</p>
                             </div>
-                            <button class="popular__item__buy">Купить</button>
+                            <div class="popular__item__buy">
+                                <a href="tovar.html">Купить</a>
+                            </div>
                         </div>
                     </div>
                     <div class="popular__item">
@@ -266,7 +284,9 @@
                             <div class="popular__item__price">
                                 <p>40.000р</p>
                             </div>
-                            <button class="popular__item__buy">Купить</button>
+                            <div class="popular__item__buy">
+                                <a href="#">Купить</a>
+                            </div>
                         </div>
                     </div>
                     <div class="popular__item">
@@ -280,7 +300,11 @@
                             <div class="popular__item__price">
                                 <p>40.000р</p>
                             </div>
-                            <button class="popular__item__buy">Купить</button>
+                            <div class="popular__item__buy">
+                                <div class="popular__item__buy">
+                                <a href="#">Купить</a>
+                            </div>
+                            </div>
                         </div>
                     </div>
                     <div class="popular__item">
@@ -294,7 +318,9 @@
                             <div class="popular__item__price">
                                 <p>40.000р</p>
                             </div>
-                            <button class="popular__item__buy">Купить</button>
+                            <div class="popular__item__buy">
+                                <a href="#">Купить</a>
+                            </div>
                         </div>
                     </div>
                     <div class="popular__item">
@@ -308,7 +334,9 @@
                             <div class="popular__item__price">
                                 <p>40.000р</p>
                             </div>
-                            <button class="popular__item__buy">Купить</button>
+                            <div class="popular__item__buy">
+                                <a href="#">Купить</a>
+                            </div>
                         </div>
                     </div><div class="popular__item">
                         <div class="popular__item__img">
@@ -321,7 +349,9 @@
                             <div class="popular__item__price">
                                 <p>40.000р</p>
                             </div>
-                            <button class="popular__item__buy">Купить</button>
+                            <div class="popular__item__buy">
+                                <a href="#">Купить</a>
+                            </div>
                         </div>
                     </div>
                     <div class="popular__item">
@@ -335,7 +365,9 @@
                             <div class="popular__item__price">
                                 <p>40.000р</p>
                             </div>
-                            <button class="popular__item__buy">Купить</button>
+                            <div class="popular__item__buy">
+                                <a href="#">Купить</a>
+                            </div>
                         </div>
                     </div>
                     <div class="popular__item">
@@ -349,7 +381,9 @@
                             <div class="popular__item__price">
                                 <p>40.000р</p>
                             </div>
-                            <button class="popular__item__buy">Купить</button>
+                            <div class="popular__item__buy">
+                                <a href="#">Купить</a>
+                            </div>
                         </div>
                     </div>
                     <div class="popular__item">
@@ -363,7 +397,9 @@
                             <div class="popular__item__price">
                                 <p>40.000р</p>
                             </div>
-                            <button class="popular__item__buy">Купить</button>
+                            <div class="popular__item__buy">
+                                <a href="#">Купить</a>
+                            </div>
                         </div>
                     </div>
                     <div class="popular__item">
@@ -377,7 +413,9 @@
                             <div class="popular__item__price">
                                 <p>40.000р</p>
                             </div>
-                            <button class="popular__item__buy">Купить</button>
+                            <div class="popular__item__buy">
+                                <a href="#">Купить</a>
+                            </div>
                         </div>
                     </div>
                 </div>
