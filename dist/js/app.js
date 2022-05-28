@@ -152,7 +152,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	});
 		// PriceRange
-
 $("#settings-btn").click(function(){
 	$(".category__filters").toggleClass("category__filters__open");
 });
