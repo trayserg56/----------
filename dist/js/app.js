@@ -152,9 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	});
 		// PriceRange
-$(".category__filters__manufacturer__item").click(function(){
-	$(".category__filters__manufacturer__item__back").addClass("category__filters__manufacturer__item__active");
-});
+
 $("#settings-btn").click(function(){
 	$(".category__filters").toggleClass("category__filters__open");
 });
